@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <h1 class="shopping-cart-title">Shopping Cart</h1>
+    <div class="container">
+      <div class="orders">
+        <div class="choose-all">
+          <button
+            class="choose-all-button"
+            onclick="chooseAll()"
+            id="choose-all-button"
+            value="choose-all-button"
+          >
+            Choose All
+          </button>
+          <button
+            class="remove-all-button"
+            id="remove-all-button"
+            value="remove-all-button"
+            onclick="removeAll()"
+          >
+            Delete All
+          </button>
+        </div>
+        <div class="products" id="products">
+          <div class="product" id="product1">
+            <div class="image">
+              <div
+                class="checked"
+                id="product1-image"
+                name="product1-image"
+                value="product1"
+              >
+                <input
+                  type="checkbox"
+                  id="store1"
+                  value="product1"
+                  oninput="isChecked(id, 'product1-price')"
+                />
+                <label for="store1">Store 1</label>
+              </div>
+              <img src="./product-images/thinkpad.jpg" alt="thinkpad" /
+              class="product-image" width="250em" height="200em">
+            </div>
+            <div class="description">
+              <h4 class="product-title">
+                Lenovo Thinkpad X1 Carbon RAM 16GB SSD 512GB Intel Evo
+              </h4>
+              <h3 class="product-price" id="product1-price"></h3>
+              <button
+                class="remove-product-button"
+                id="remove-product1-button"
+                value="product1"
+                onclick="removeProduct(value, `${value}-price`)"
+              >
+                <i class="glyphicon glyphicon-trash"></i>
+              </button>
+              <button
+                class="min-product-quantity-button"
+                id="min-product1-quantity-button"
+                onclick="minProduct('product1-quantity', 'product1-price')"
+              >
+                -
+              </button>
+              <p class="quantity" id="product1-quantity">1</p>
+              <button
+                class="add-product-quantity-button"
+                id="add-product1-quantity-button"
+                onclick="addProduct('product1-quantity', 'product1-price')"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="product" id="product2">
+            <div class="image">
+              <div
+                class="checked"
+                id="product2-image"
+                name="product2-image"
+                value="product2"
+              >
+                <input
+                  type="checkbox"
+                  id="store2"
+                  value="product2"
+                  oninput="isChecked(id, 'product2-price')"
+                />
+                <label for="store2">Store 2</label>
+              </div>
+              <img src="./product-images/surface.jpg" alt="thinkpad" /
+              class="product-image" width="250em" height="200em">
+            </div>
+            <div class="description">
+              <h4 class="product-title">
+                Microsoft Surface Laptop 2 Intel Core i7-1123
+              </h4>
+              <h3 class="product-price" id="product2-price"></h3>
+              <button
+                class="remove-product-button"
+                id="remove-product2-button"
+                value="product2"
+                onclick="removeProduct(value)"
+              >
+                <i class="glyphicon glyphicon-trash"></i>
+              </button>
+              <button
+                class="min-product-quantity-button"
+                id="min-product2-quantity-button"
+                onclick="minProduct('product2-quantity', 'product2-price')"
+              >
+                -
+              </button>
+              <p class="quantity" id="product2-quantity">1</p>
+              <button
+                class="add-product-quantity-button"
+                id="add-product2-quantity-button"
+                onclick="addProduct('product2-quantity', 'product2-price')"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="product" id="product3">
+            <div class="image">
+              <div
+                class="checked"
+                id="product3-image"
+                name="product3-image"
+                value="product3"
+              >
+                <input
+                  type="checkbox"
+                  id="store3"
+                  value="product3"
+                  oninput="isChecked(id, 'product3-price')"
+                />
+                <label for="store3">Store 3</label>
+              </div>
+              <img src="./product-images/lenovo-dual-screen.jpg" alt="thinkpad"
+              / class="product-image" width="250em" height="200em">
+            </div>
+            <div class="description">
+              <h4 class="product-title">
+                Lenovo Yoga Book 9i 13" i7-1335U 16GB 1TB
+              </h4>
+              <h3 class="product-price" id="product3-price"></h3>
+              <button
+                class="remove-product-button"
+                id="remove-product3-button"
+                value="product3"
+                onclick="removeProduct(value)"
+              >
+                <i class="glyphicon glyphicon-trash"></i>
+              </button>
+              <button
+                class="min-product-quantity-button"
+                id="min-product3-quantity-button"
+                onclick="minProduct('product3-quantity', 'product3-price')"
+              >
+                -
+              </button>
+              <p class="quantity" id="product3-quantity">1</p>
+              <button
+                class="add-product-quantity-button"
+                id="add-product3-quantity-button"
+                onclick="addProduct('product3-quantity', 'product3-price')"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shopping-summary">
+        <h2>Shopping Summary</h2>
+        <p class="total-text">Total</p>
+        <h3 class="total-price" id="total-price">US$0</h3>
+        <button class="buy-button">Buy (3)</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
