@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h3>Color Picker</h3>
+      <div id="output"></div>
+      <input type="color" name="color" id="color" oninput="getColor()" />
+      <input
+        type="text"
+        name="hex"
+        id="hex"
+        placeholder="input your hex color"
+      />
+      <button id="apply" onclick="inputHex()">Apply Color</button>
+      <p style="margin-bottom: 0px; margin-top: 5px">Selected color:</p>
+      <p id="result">HEX: #f5f5dc | RGB: rgb(245, 245, 220)</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

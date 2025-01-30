@@ -1,0 +1,44 @@
+html {
+  background-color: beige;
+}
+
+#container {
+  background-color: azure;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  border: 1px solid;
+  padding: 5px;
+  display: grid;
+  margin: 100px auto;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#color {
+  margin: 0px auto 5px auto;
+}
+
+#hex {
+  width: 50%;
+  margin: 5px auto 5px;
+}
+
+#apply {
+  width: fit-content;
+  margin: auto;
+}
+
+p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#result {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
