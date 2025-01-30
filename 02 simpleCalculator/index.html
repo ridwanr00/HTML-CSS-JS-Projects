@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" name="output" id="output" placeholder="0" onkeypress="directCalculate(event)">
+      <button type="button" id="remove-all" onclick="removeAll()">
+        <p>C</p>
+      </button>
+      <button type="button" id="divide" class="operation" onclick="operations(value)" value="/">
+        <p>/</p>
+      </button>
+      <button type="button" id="times" class="operation" onclick="operations(value)" value="*">
+        <p>*</p>
+      </button>
+      <button type="button" id="backspace" class="operation" onclick="backspace()">
+        <img src="./backspace-svgrepo-com.svg" alt="backspace" />
+      </button>
+      <button type="button" id="seven" class="number" onclick="numbers(value)" value="7">
+        <p>7</p>
+      </button>
+      <button type="button" id="eight" class="number" onclick="numbers(value)" value="8">
+        <p>8</p>
+      </button>
+      <button type="button" id="nine" class="number" onclick="numbers(value)" value="9">
+        <p>9</p>
+      </button>
+      <button type="button" id="minus" class="operation" onclick="operations(value)" value="-">
+        <p>-</p>
+      </button>
+      <button type="button" id="four" class="number" onclick="numbers(value)" value="4"><p>4</p></button>
+      <button type="button" id="five" class="number" onclick="numbers(value)" value="5">
+        <p>5</p>
+      </button>
+      <button type="button" id="six" class="number" onclick="numbers(value)" value="6">
+        <p>6</p>
+      </button>
+      <button type="button" id="plus" class="operation" onclick="operations(value)" value="+">
+        <p>+</p>
+      </button>
+      <button type="button" id="one" class="number" onclick="numbers(value)" value="1">
+        <p>1</p>
+      </button>
+      <button type="button" id="two" class="number" onclick="numbers(value)" value="2">
+        <p>2</p>
+      </button>
+      <button type="button" id="three" class="number" onclick="numbers(value)" value="3">
+        <p>3</p>
+      </button>
+      <button type="button" id="equals" onclick="equals()">
+        <p>=</p>
+      </button>
+      <button type="button" id="zero" class="number" onclick="numbers(value)" value="0">
+        <p>0</p>
+      </button>
+      <button type="button" id="point" class="number" onclick="numbers(value)" value=".">
+        <p>.</p>
+      </button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
