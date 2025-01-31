@@ -34,3 +34,9 @@ const equals = () => {
     const result = math.evaluate(operation);
     output.value = result;
 }
+
+const darkMode = () => {
+    const element = document.body
+    element.classList.toggle('dark-mode')
+    document.getElementById("dark-mode").innerText = "Light Mode";
+}

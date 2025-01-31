@@ -12,3 +12,9 @@ const counter = () => {
     1000 - totalCharacter
   }`;
 };
+
+const darkMode = () => {
+  var element = document.body
+  element.classList.toggle("dark-mode")
+  document.getElementById('dark-mode').innerText = 'Light Mode'
+}
