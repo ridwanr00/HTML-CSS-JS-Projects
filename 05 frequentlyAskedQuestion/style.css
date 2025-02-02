@@ -1,0 +1,12 @@
+h3 {
+    text-align: center;
+}
+
+.answer {
+    overflow:hidden;
+    max-height: 0px;
+}
+
+.faq {
+    margin: 50px auto;
+}
